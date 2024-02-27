@@ -1,0 +1,4 @@
+Get list of interfaces to use in command output
+break into way so that pieces that need to be run multiple times can be 
+get hostname from device and add it to filename instead of tab name 
+make for Cisco IOS, NXOS, and IOS-XR
