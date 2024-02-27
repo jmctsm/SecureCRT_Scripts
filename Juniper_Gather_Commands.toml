@@ -1,0 +1,38 @@
+gather_name = "Juniper_Information_Gather"
+[commands] 
+    BGP = [
+        "show bgp summary", 
+        "show bgp group", 
+        "show bgp neighbor", 
+        "show route next-hop database", 
+        "show route protocol bgp", 
+        "show route protocol bgp terse", 
+        "show route receive-protocol bgp", 
+        "show route advertising-protocol bgp", 
+        "show route advertising-protocol bgp <neighbor-address> extensive", 
+        "show route receive-protocol bgp <neighbor-address>", 
+        "show route forwarding-table", 
+        "show route resolution unresolved", 
+        "show route hidden", 
+        "show route community <reg-ex>", 
+        "show route terse community-name <name>", 
+        "show route damping", 
+        "show route aspath-regex \"regex\"", 
+        "show route damping history", 
+        "show route damping decayed", 
+        "show route damping suppressed"
+        ]
+    OSPF = [
+        "show ospf overview", 
+        "show ospf database", 
+        "show ospf neighbor detail", 
+        "show ospf route", 
+        "show ospf statistics", 
+        "show ospf interface", 
+        "show ospf log", 
+        "show route protool ospf", 
+        "show route <x.x.x.x> extensive", 
+        "show ospf database summary ", 
+        "show ospf database extensive", 
+        "show bfd session"
+        ]
