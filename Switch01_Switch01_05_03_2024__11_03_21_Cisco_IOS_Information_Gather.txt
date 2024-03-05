@@ -1,0 +1,3328 @@
+Commands attempted to run as part of this script for device Switch01
+
+System_Information
+	show version
+	show hardware capacity
+	show inventory
+	show module
+	show feature
+	show feature-set
+	show hostname
+	dir all-filesystems
+	show redundancy
+Routing_Information
+	show ip route
+Interface_Information
+	show interfaces 
+	show interfaces summary
+	show ip interface
+	show ip interface brief
+	show interface description
+	show interfaces counters
+	show etherchannel summary
+	show interface brief
+	show interface status
+	show interface transceiver detail
+	show ipv6 interface 
+	show ipv6 interface brief
+ISIS
+	show isis neighbor
+	show isis interface
+	show isis database
+OSPF
+	show ip ospf interface
+	show ip ospf database
+	show ip ospf neighbor
+BGP
+	show bgp * summary
+	show bgp * all detail
+	show bgp * all neighbors 
+	show bgp * all 
+	show bgp vrf all all summ
+	show bgp l2vpn evpn summ
+L2_Information
+	show vlan 
+	show vlans 
+	show vlan summary
+	show spanning-tree
+Multicast
+	show ip pim interface
+	show ip pim rp
+	show ip igmp groups
+	show ip mroute
+	show ip pim neighbor
+Neighbors
+	show ip arp
+	show mac address-table
+	show lldp neighbor
+	show cdp neighbors
+Configurations
+	show running-config 
+	show startup-config
+	show running-config all
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+System_Information
+
+Results of command: show version
+Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Experimental Version 15.2(20200924:215240) [sweickge-sep24-2020-l2iol-release 135]
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Tue 29-Sep-20 11:53 by sweickge
+
+
+ROM: Bootstrap program is IOSv
+
+Switch01 uptime is 2 hours, 5 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios_l2-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv () processor (revision 1.0) with 935169K/111616K bytes of memory.
+Processor board ID 90FQEK7OQH5
+2 Virtual Ethernet interfaces
+8 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+0K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+Configuration register is 0x101
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show hardware capacity
+^
+% Invalid input detected at '^' marker.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show inventory
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show module
+^
+% Invalid input detected at '^' marker.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show feature
+^
+% Invalid input detected at '^' marker.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show feature-set
+^
+% Invalid input detected at '^' marker.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show hostname
+^
+% Invalid input detected at '^' marker.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: dir all-filesystems
+Directory of flash0:/
+
+    1  drw-           0  Jan 30 2013 00:00:00 +00:00  boot
+  264  drw-           0  Oct 14 2013 00:00:00 +00:00  config
+  267  -rw-         567  Sep 29 2020 00:00:00 +00:00  eula.txt
+  268  -rw-   119857844  Sep 29 2020 00:00:00 +00:00  vios_l2-adventerprisek9-m
+  269  -rw-      524288   Mar 4 2024 22:39:50 +00:00  nvram
+  270  -rw-          34   Mar 4 2024 23:05:26 +00:00  pnp-tech-time
+  271  -rw-       52075   Mar 4 2024 23:05:28 +00:00  pnp-tech-discovery-summary
+  272  -rw-         159   Mar 5 2024 15:00:28 +00:00  e1000_bia.txt
+
+2142715904 bytes total (2017660928 bytes free)
+Directory of system:/
+
+    2  -r--           0                    <no date>  default-running-config
+    4  dr-x           0                    <no date>  memory
+    1  -rw-        2697                    <no date>  running-config
+    3  dr-x           0                    <no date>  vfiles
+
+No space information available
+Directory of tmpsys:/
+
+    6  drw-           0                    <no date>  eem_lib_system
+    5  drw-           0                    <no date>  eem_lib_user
+   18  -rw-           0                    <no date>  eem_pnt_0
+   20  -rw-           0                    <no date>  eem_pnt_1
+   38  -rw-           0                    <no date>  eem_pnt_10
+   40  -rw-           0                    <no date>  eem_pnt_11
+   42  -rw-           0                    <no date>  eem_pnt_12
+   44  -rw-           0                    <no date>  eem_pnt_13
+   46  -rw-           0                    <no date>  eem_pnt_14
+   48  -rw-           0                    <no date>  eem_pnt_15
+   22  -rw-           0                    <no date>  eem_pnt_2
+   24  -rw-           0                    <no date>  eem_pnt_3
+   26  -rw-           0                    <no date>  eem_pnt_4
+   28  -rw-           0                    <no date>  eem_pnt_5
+   30  -rw-           0                    <no date>  eem_pnt_6
+   32  -rw-           0                    <no date>  eem_pnt_7
+   34  -rw-           0                    <no date>  eem_pnt_8
+   36  -rw-           0                    <no date>  eem_pnt_9
+    4  drw-           0                    <no date>  eem_policy
+    8  drw-           0                    <no date>  eem_pub
+   17  -rw-           0                    <no date>  eem_rpc_0
+   19  -rw-           0                    <no date>  eem_rpc_1
+   37  -rw-           0                    <no date>  eem_rpc_10
+   39  -rw-           0                    <no date>  eem_rpc_11
+   41  -rw-           0                    <no date>  eem_rpc_12
+   43  -rw-           0                    <no date>  eem_rpc_13
+   45  -rw-           0                    <no date>  eem_rpc_14
+   47  -rw-           0                    <no date>  eem_rpc_15
+   21  -rw-           0                    <no date>  eem_rpc_2
+   23  -rw-           0                    <no date>  eem_rpc_3
+   25  -rw-           0                    <no date>  eem_rpc_4
+   27  -rw-           0                    <no date>  eem_rpc_5
+   29  -rw-           0                    <no date>  eem_rpc_6
+   31  -rw-           0                    <no date>  eem_rpc_7
+   33  -rw-           0                    <no date>  eem_rpc_8
+   35  -rw-           0                    <no date>  eem_rpc_9
+    7  drw-           0                    <no date>  eem_temp
+    1  dr-x           0                    <no date>  lib
+    9  drw-           0                    <no date>  macro_scripts
+
+No space information available
+Directory of nvram:/
+
+  250  -rw-        1561                    <no date>  startup-config
+  251  ----        5484                    <no date>  private-config
+    1  ----          31                    <no date>  udi
+    2  ----          35                    <no date>  persistent-data
+    3  -rw-         736                    <no date>  vlan.dat
+    4  -rw-           0                    <no date>  ifIndex-table
+
+262144 bytes total (250951 bytes free)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show redundancy
+^
+% Invalid input detected at '^' marker.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Routing_Information
+
+Results of command: show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is not set
+
+      192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.1.0/31 is directly connected, Vlan11
+L        192.168.1.1/32 is directly connected, Vlan11
+      192.168.2.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.2.0/31 is directly connected, Vlan100
+L        192.168.2.0/32 is directly connected, Vlan100
+      192.168.3.0/31 is subnetted, 1 subnets
+B        192.168.3.0 [200/0] via 192.168.254.12, 01:43:19
+      192.168.254.0/32 is subnetted, 7 subnets
+O        192.168.254.10 [110/2] via 192.168.1.0, 02:04:24, Vlan11
+C        192.168.254.11 is directly connected, Loopback0
+D        192.168.254.12 [90/130816] via 192.168.2.1, 02:04:42, Vlan100
+B        192.168.254.110 [20/0] via 192.168.1.0, 01:50:21
+C        192.168.254.111 is directly connected, Loopback100
+B        192.168.254.112 [200/0] via 192.168.254.12, 01:44:42
+B        192.168.254.113 [200/0] via 192.168.254.12, 01:43:19
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Interface_Information
+
+Results of command: show interfaces
+GigabitEthernet0/0 is down, line protocol is down (notconnect) 
+  Hardware is iGbE, address is 5001.0003.0000 (bia 5001.0003.0000)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Auto Duplex, Auto Speed, link type is auto, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     1 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Hardware is iGbE, address is 5001.0003.0001 (bia 5001.0003.0001)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Auto Duplex, Auto Speed, link type is auto, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:01, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     1996 packets input, 201246 bytes, 0 no buffer
+     Received 0 broadcasts (0 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     4993 packets output, 377783 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Hardware is iGbE, address is 5001.0003.0002 (bia 5001.0003.0002)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Auto Duplex, Auto Speed, link type is auto, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:01, output 00:00:01, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     2313 packets input, 210325 bytes, 0 no buffer
+     Received 0 broadcasts (0 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     6076 packets output, 477026 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/3 is down, line protocol is down (notconnect) 
+  Hardware is iGbE, address is 5001.0003.0003 (bia 5001.0003.0003)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Auto Duplex, Auto Speed, link type is auto, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     1 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet1/0 is down, line protocol is down (notconnect) 
+  Hardware is iGbE, address is 5001.0003.0004 (bia 5001.0003.0004)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Auto Duplex, Auto Speed, link type is auto, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     1 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet1/1 is down, line protocol is down (notconnect) 
+  Hardware is iGbE, address is 5001.0003.0005 (bia 5001.0003.0005)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Auto Duplex, Auto Speed, link type is auto, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     1 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet1/2 is down, line protocol is down (notconnect) 
+  Hardware is iGbE, address is 5001.0003.0006 (bia 5001.0003.0006)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Auto Duplex, Auto Speed, link type is auto, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     1 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet1/3 is down, line protocol is down (notconnect) 
+  Hardware is iGbE, address is 5001.0003.0007 (bia 5001.0003.0007)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Auto Duplex, Auto Speed, link type is auto, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     1 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+Loopback0 is up, line protocol is up 
+  Hardware is Loopback
+  Internet address is 192.168.254.11/32
+  MTU 1514 bytes, BW 8000000 Kbit/sec, DLY 5000 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, loopback not set
+  Keepalive set (10 sec)
+  Last input 01:38:43, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     12 packets output, 780 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Loopback100 is up, line protocol is up 
+  Hardware is Loopback
+  Internet address is 192.168.254.111/32
+  MTU 1514 bytes, BW 8000000 Kbit/sec, DLY 5000 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, loopback not set
+  Keepalive set (10 sec)
+  Last input 01:38:46, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     12 packets output, 780 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Vlan11 is up, line protocol is up 
+  Hardware is Ethernet SVI, address is 5001.0003.800b (bia 5001.0003.800b)
+  Internet address is 192.168.1.1/31
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported 
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:01, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     1098 packets input, 95587 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     1087 packets output, 94947 bytes, 0 underruns
+     0 output errors, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+Vlan100 is up, line protocol is up 
+  Hardware is Ethernet SVI, address is 5001.0003.8064 (bia 5001.0003.8064)
+  Internet address is 192.168.2.0/31
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported 
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:00, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     1915 packets input, 139775 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     1917 packets output, 140045 bytes, 0 underruns
+     0 output errors, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show interfaces summary
+*: interface is up
+ IHQ: pkts in input hold queue     IQD: pkts dropped from input queue
+ OHQ: pkts in output hold queue    OQD: pkts dropped from output queue
+ RXBS: rx rate (bits/sec)          RXPS: rx rate (pkts/sec)
+ TXBS: tx rate (bits/sec)          TXPS: tx rate (pkts/sec)
+ TRTL: throttle count
+
+  Interface                   IHQ       IQD       OHQ       OQD      RXBS      RXPS      TXBS      TXPS      TRTL
+-----------------------------------------------------------------------------------------------------------------
+  GigabitEthernet0/0            0         0         0         0         0         0         0         0         0
+* GigabitEthernet0/1            0         0         0         0         0         0         0         0         0
+* GigabitEthernet0/2            0         0         0         0         0         0         0         0         0
+  GigabitEthernet0/3            0         0         0         0         0         0         0         0         0
+  GigabitEthernet1/0            0         0         0         0         0         0         0         0         0
+  GigabitEthernet1/1            0         0         0         0         0         0         0         0         0
+  GigabitEthernet1/2            0         0         0         0         0         0         0         0         0
+  GigabitEthernet1/3            0         0         0         0         0         0         0         0         0
+* Loopback0                     0         0         0         0         0         0         0         0         0
+* Loopback100                   0         0         0         0         0         0         0         0         0
+* Vlan11                        0         0         0         0         0         0         0         0         0
+* Vlan100                       0         0         0         0         0         0         0         0         0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show ip interface
+GigabitEthernet0/0 is down, line protocol is down
+  Inbound  access list is not set
+GigabitEthernet0/1 is up, line protocol is up
+  Inbound  access list is not set
+GigabitEthernet0/2 is up, line protocol is up
+  Inbound  access list is not set
+GigabitEthernet0/3 is down, line protocol is down
+  Inbound  access list is not set
+GigabitEthernet1/0 is down, line protocol is down
+  Inbound  access list is not set
+GigabitEthernet1/1 is down, line protocol is down
+  Inbound  access list is not set
+GigabitEthernet1/2 is down, line protocol is down
+  Inbound  access list is not set
+GigabitEthernet1/3 is down, line protocol is down
+  Inbound  access list is not set
+Loopback0 is up, line protocol is up
+  Internet address is 192.168.254.11/32
+  Broadcast address is 255.255.255.255
+  Address determined by non-volatile memory
+  MTU is 1514 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Multicast reserved groups joined: 224.0.0.5 224.0.0.10
+  Outgoing access list is not set
+  Inbound  access list is not set
+  Proxy ARP is enabled
+  Local Proxy ARP is disabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is enabled
+  IP Flow switching is disabled
+  IP CEF switching is enabled
+  IP CEF switching turbo vector
+  IP Null turbo vector
+  IP multicast fast switching is enabled
+  IP multicast distributed fast switching is disabled
+  IP route-cache flags are Fast, CEF
+  Router Discovery is disabled
+  IP output packet accounting is disabled
+  IP access violation accounting is disabled
+  TCP/IP header compression is disabled
+  RTP/IP header compression is disabled
+  Probe proxy name replies are disabled
+  Policy routing is disabled
+  Network address translation is disabled
+  BGP Policy Mapping is disabled
+  Input features: MCI Check
+  IPv4 WCCP Redirect outbound is disabled
+  IPv4 WCCP Redirect inbound is disabled
+  IPv4 WCCP Redirect exclude is disabled
+Loopback100 is up, line protocol is up
+  Internet address is 192.168.254.111/32
+  Broadcast address is 255.255.255.255
+  Address determined by non-volatile memory
+  MTU is 1514 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Outgoing access list is not set
+  Inbound  access list is not set
+  Proxy ARP is enabled
+  Local Proxy ARP is disabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is enabled
+  IP Flow switching is disabled
+  IP CEF switching is enabled
+  IP CEF switching turbo vector
+  IP Null turbo vector
+  IP multicast fast switching is enabled
+  IP multicast distributed fast switching is disabled
+  IP route-cache flags are Fast, CEF
+  Router Discovery is disabled
+  IP output packet accounting is disabled
+  IP access violation accounting is disabled
+  TCP/IP header compression is disabled
+  RTP/IP header compression is disabled
+  Probe proxy name replies are disabled
+  Policy routing is disabled
+  Network address translation is disabled
+  BGP Policy Mapping is disabled
+  Input features: MCI Check
+  IPv4 WCCP Redirect outbound is disabled
+  IPv4 WCCP Redirect inbound is disabled
+  IPv4 WCCP Redirect exclude is disabled
+Vlan11 is up, line protocol is up
+  Internet address is 192.168.1.1/31
+  Broadcast address is 255.255.255.255
+  Address determined by non-volatile memory
+  MTU is 1500 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Multicast reserved groups joined: 224.0.0.5 224.0.0.6
+  Outgoing access list is not set
+  Inbound  access list is not set
+  Proxy ARP is enabled
+  Local Proxy ARP is disabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is enabled
+  IP Flow switching is disabled
+  IP CEF switching is enabled
+  IP CEF switching turbo vector
+  IP Null turbo vector
+  IP multicast fast switching is enabled
+  IP multicast distributed fast switching is disabled
+  IP route-cache flags are Fast, CEF
+  Router Discovery is disabled
+  IP output packet accounting is disabled
+  IP access violation accounting is disabled
+  TCP/IP header compression is disabled
+  RTP/IP header compression is disabled
+  Probe proxy name replies are disabled
+  Policy routing is disabled
+  Network address translation is disabled
+  BGP Policy Mapping is disabled
+  Input features: MCI Check
+  IPv4 WCCP Redirect outbound is disabled
+  IPv4 WCCP Redirect inbound is disabled
+  IPv4 WCCP Redirect exclude is disabled
+Vlan100 is up, line protocol is up
+  Internet address is 192.168.2.0/31
+  Broadcast address is 255.255.255.255
+  Address determined by non-volatile memory
+  MTU is 1500 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Multicast reserved groups joined: 224.0.0.10
+  Outgoing access list is not set
+  Inbound  access list is not set
+  Proxy ARP is enabled
+  Local Proxy ARP is disabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is enabled
+  IP Flow switching is disabled
+  IP CEF switching is enabled
+  IP CEF switching turbo vector
+  IP Null turbo vector
+  IP multicast fast switching is enabled
+  IP multicast distributed fast switching is disabled
+  IP route-cache flags are Fast, CEF
+  Router Discovery is disabled
+  IP output packet accounting is disabled
+  IP access violation accounting is disabled
+  TCP/IP header compression is disabled
+  RTP/IP header compression is disabled
+  Probe proxy name replies are disabled
+  Policy routing is disabled
+  Network address translation is disabled
+  BGP Policy Mapping is disabled
+  Input features: MCI Check
+  IPv4 WCCP Redirect outbound is disabled
+  IPv4 WCCP Redirect inbound is disabled
+  IPv4 WCCP Redirect exclude is disabled
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0     unassigned      YES unset  down                  down    
+GigabitEthernet0/1     unassigned      YES unset  up                    up      
+GigabitEthernet0/2     unassigned      YES unset  up                    up      
+GigabitEthernet0/3     unassigned      YES unset  down                  down    
+GigabitEthernet1/0     unassigned      YES unset  down                  down    
+GigabitEthernet1/1     unassigned      YES unset  down                  down    
+GigabitEthernet1/2     unassigned      YES unset  down                  down    
+GigabitEthernet1/3     unassigned      YES unset  down                  down    
+Loopback0              192.168.254.11  YES NVRAM  up                    up      
+Loopback100            192.168.254.111 YES NVRAM  up                    up      
+Vlan11                 192.168.1.1     YES NVRAM  up                    up      
+Vlan100                192.168.2.0     YES NVRAM  up                    up
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show interface description
+Interface                      Status         Protocol Description
+Gi0/0                          down           down     
+Gi0/1                          up             up       
+Gi0/2                          up             up       
+Gi0/3                          down           down     
+Gi1/0                          down           down     
+Gi1/1                          down           down     
+Gi1/2                          down           down     
+Gi1/3                          down           down     
+Lo0                            up             up       
+Lo100                          up             up       
+Vl11                           up             up       
+Vl100                          up             up
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show interfaces counters
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show etherchannel summary
+Flags:  D - down        P - bundled in port-channel
+        I - stand-alone s - suspended
+        H - Hot-standby (LACP only)
+        R - Layer3      S - Layer2
+        U - in use      N - not in use, no aggregation
+        f - failed to allocate aggregator
+
+        M - not in use, minimum links not met
+        m - not in use, port not aggregated due to minimum links not met
+        u - unsuitable for bundling
+        w - waiting to be aggregated
+        d - default port
+
+        A - formed by Auto LAG
+
+
+Number of channel-groups in use: 0
+Number of aggregators:           0
+
+Group  Port-channel  Protocol    Ports
+------+-------------+-----------+-----------------------------------------------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show interface brief
+^
+% Invalid input detected at '^' marker.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show interface status
+Port      Name               Status       Vlan       Duplex  Speed Type 
+Gi0/0                        notconnect   1          a-full   auto RJ45
+Gi0/1                        connected    11         a-full   auto RJ45
+Gi0/2                        connected    trunk      a-full   auto RJ45
+Gi0/3                        notconnect   1          a-full   auto RJ45
+Gi1/0                        notconnect   1          a-full   auto RJ45
+Gi1/1                        notconnect   1          a-full   auto RJ45
+Gi1/2                        notconnect   1          a-full   auto RJ45
+Gi1/3                        notconnect   1          a-full   auto RJ45
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show interface transceiver detail
+^
+% Invalid input detected at '^' marker.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show ipv6 interface
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show ipv6 interface brief
+GigabitEthernet0/0     [down/down]
+    unassigned
+GigabitEthernet0/1     [up/up]
+    unassigned
+GigabitEthernet0/2     [up/up]
+    unassigned
+GigabitEthernet0/3     [down/down]
+    unassigned
+GigabitEthernet1/0     [down/down]
+    unassigned
+GigabitEthernet1/1     [down/down]
+    unassigned
+GigabitEthernet1/2     [down/down]
+    unassigned
+GigabitEthernet1/3     [down/down]
+    unassigned
+Loopback0              [up/up]
+    unassigned
+Loopback100            [up/up]
+    unassigned
+Vlan11                 [up/up]
+    unassigned
+Vlan100                [up/up]
+    unassigned
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ISIS
+
+Results of command: show isis neighbor
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show isis interface
+% Incomplete command.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show isis database
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+OSPF
+
+Results of command: show ip ospf interface
+Loopback0 is up, line protocol is up 
+  Internet Address 192.168.254.11/32, Area 0, Attached via Network Statement
+  Process ID 100, Router ID 192.168.254.11, Network Type LOOPBACK, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Loopback interface is treated as a stub Host
+Vlan11 is up, line protocol is up 
+  Internet Address 192.168.1.1/31, Area 0, Attached via Network Statement
+  Process ID 100, Router ID 192.168.254.11, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 192.168.254.11, Interface address 192.168.1.1
+  Backup Designated router (ID) 192.168.254.10, Interface address 192.168.1.0
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:05
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 2, maximum is 2
+  Last flood scan time is 0 msec, maximum is 0 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 192.168.254.10  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show ip ospf database
+OSPF Router with ID (192.168.254.11) (Process ID 100)
+
+		Router Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+192.168.254.10  192.168.254.10  1519        0x80000005 0x00DF11 2         
+192.168.254.11  192.168.254.11  1461        0x80000008 0x00EDFB 2         
+
+		Net Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.1.1     192.168.254.11  1461        0x80000004 0x00254E
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show ip ospf neighbor
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.254.10    1   FULL/BDR        00:00:38    192.168.1.0     Vlan11
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BGP
+
+Results of command: show bgp * summary
+BGP router identifier 192.168.254.11, local AS number 65011
+BGP table version is 13, main routing table version 13
+7 network entries using 1008 bytes of memory
+8 path entries using 672 bytes of memory
+4/4 BGP path/bestpath attribute entries using 656 bytes of memory
+2 BGP AS-PATH entries using 48 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 2384 total bytes of memory
+BGP activity 7/0 prefixes, 8/0 paths, scan interval 60 secs
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+192.168.1.0     4        65010     127     128       13    0    0 01:51:11        2
+192.168.254.12  4        65011     123     126       13    0    0 01:46:47        4
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show bgp * all detail
+For address family: IPv4 Unicast
+
+BGP routing table entry for 192.168.1.0/31, version 11
+  Paths: (1 available, best #1, table default, RIB-failure(17))
+  Advertised to update-groups:
+     4         
+  Refresh Epoch 1
+  65010
+    192.168.1.0 from 192.168.1.0 (192.168.254.10)
+      Origin IGP, metric 0, localpref 100, valid, external, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 192.168.2.0/31, version 5
+  Paths: (2 available, best #2, table default)
+  Advertised to update-groups:
+     2          4         
+  Refresh Epoch 1
+  Local
+    192.168.254.12 (metric 130816) from 192.168.254.12 (192.168.254.12)
+      Origin IGP, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    0.0.0.0 from 0.0.0.0 (192.168.254.11)
+      Origin IGP, metric 0, localpref 100, weight 32768, valid, sourced, local, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 192.168.3.0/31, version 12
+  Paths: (1 available, best #1, table default)
+  Advertised to update-groups:
+     2         
+  Refresh Epoch 1
+  65013
+    192.168.254.12 (metric 130816) from 192.168.254.12 (192.168.254.12)
+      Origin IGP, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 192.168.254.110/32, version 2
+  Paths: (1 available, best #1, table default)
+  Advertised to update-groups:
+     4         
+  Refresh Epoch 1
+  65010
+    192.168.1.0 from 192.168.1.0 (192.168.254.10)
+      Origin IGP, metric 0, localpref 100, valid, external, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 192.168.254.111/32, version 8
+  Paths: (1 available, best #1, table default)
+  Advertised to update-groups:
+     2          4         
+  Refresh Epoch 1
+  Local
+    0.0.0.0 from 0.0.0.0 (192.168.254.11)
+      Origin IGP, metric 0, localpref 100, weight 32768, valid, sourced, local, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 192.168.254.112/32, version 10
+  Paths: (1 available, best #1, table default)
+  Advertised to update-groups:
+     2         
+  Refresh Epoch 1
+  Local
+    192.168.254.12 (metric 130816) from 192.168.254.12 (192.168.254.12)
+      Origin IGP, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 192.168.254.113/32, version 13
+  Paths: (1 available, best #1, table default)
+  Advertised to update-groups:
+     2         
+  Refresh Epoch 1
+  65013
+    192.168.254.12 (metric 130816) from 192.168.254.12 (192.168.254.12)
+      Origin IGP, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+
+For address family: IPv4 Multicast
+
+
+For address family: L2VPN E-VPN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show bgp * all neighbors
+For address family: IPv4 Unicast
+BGP neighbor is 192.168.1.0,  remote AS 65010, external link
+  BGP version 4, remote router ID 192.168.254.10
+  BGP state = Established, up for 01:51:17
+  Last read 00:00:39, last write 00:00:27, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                6          3
+    Keepalives:           121        123
+    Route Refresh:          0          0
+    Total:                128        127
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 30 seconds
+
+  Address tracking is enabled, the RIB does have a route to 192.168.1.0
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 01:51:41
+  Connections established 1; dropped 0
+  Last reset never
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+  Interface associated: Vlan11 (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 1
+Local host: 192.168.1.1, Local port: 179
+Foreign host: 192.168.1.0, Foreign port: 47492
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x73CFF4):
+Timer          Starts    Wakeups            Next
+Retrans           127          0             0x0
+TimeWait            0          0             0x0
+AckHold           125        121             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger            0          0             0x0
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss: 2959943997  snduna: 2959946618  sndnxt: 2959946618
+irs: 1761506001  rcvnxt: 1761508529
+
+sndwnd:  15225  scale:      0  maxrcvwnd:  16384
+rcvwnd:  15320  scale:      0  delrcvwnd:   1064
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 2 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+uptime: 6677848 ms, Sent idletime: 27230 ms, Receive idletime: 27028 ms 
+Status Flags: passive open, gen tcbs
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 254 (out of order: 0), with data: 126, total data bytes: 2527
+Sent: 253 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 128, total data bytes: 2620
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x14C34EF8  FREE 
+
+BGP neighbor is 192.168.254.12,  remote AS 65011, internal link
+  BGP version 4, remote router ID 192.168.254.12
+  BGP state = Established, up for 01:46:53
+  Last read 00:00:05, last write 00:00:40, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                8          6
+    Keepalives:           117        117
+    Route Refresh:          0          0
+    Total:                126        124
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 0 seconds
+
+  Address tracking is enabled, the RIB does have a route to 192.168.254.12
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 01:51:26
+  Connections established 1; dropped 0
+  Last reset never
+  Interface associated: (none) (peering address NOT in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 192.168.254.11, Local port: 40507
+Foreign host: 192.168.254.12, Foreign port: 179
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x73CFF4):
+Timer          Starts    Wakeups            Next
+Retrans           121          0             0x0
+TimeWait            0          0             0x0
+AckHold           120        116             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger         5553       5552        0x73D228
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss: 1538970448  snduna: 1538973126  sndnxt: 1538973126
+irs: 2306094620  rcvnxt: 2306097208
+
+sndwnd:  15168  scale:      0  maxrcvwnd:  16384
+rcvwnd:  15263  scale:      0  delrcvwnd:   1121
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 3 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+uptime: 6413466 ms, Sent idletime: 5672 ms, Receive idletime: 5872 ms 
+Status Flags: active open
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 242 (out of order: 0), with data: 121, total data bytes: 2587
+Sent: 242 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 121, total data bytes: 2677
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x14C34EA8  FREE 
+
+
+For address family: IPv4 Multicast
+
+For address family: L2VPN E-VPN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show bgp * all
+For address family: IPv4 Unicast
+
+BGP table version is 13, local router ID is 192.168.254.11
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ r>   192.168.1.0/31   192.168.1.0              0             0 65010 i
+ * i  192.168.2.0/31   192.168.254.12           0    100      0 i
+ *>                    0.0.0.0                  0         32768 i
+ *>i  192.168.3.0/31   192.168.254.12           0    100      0 65013 i
+ *>   192.168.254.110/32
+                      192.168.1.0              0             0 65010 i
+ *>   192.168.254.111/32
+                      0.0.0.0                  0         32768 i
+ *>i  192.168.254.112/32
+                      192.168.254.12           0    100      0 i
+ *>i  192.168.254.113/32
+                      192.168.254.12           0    100      0 65013 i
+
+For address family: IPv4 Multicast
+
+
+For address family: L2VPN E-VPN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show bgp vrf all all summ
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show bgp l2vpn evpn summ
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+L2_Information
+
+Results of command: show vlan
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Gi0/0, Gi0/3, Gi1/0, Gi1/1
+                                                Gi1/2, Gi1/3
+11   VLAN0011                         active    Gi0/1
+100  VLAN0100                         active    
+999  VLAN0999                         active    
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+
+VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+1    enet  100001     1500  -      -      -        -    -        0      0   
+11   enet  100011     1500  -      -      -        -    -        0      0   
+100  enet  100100     1500  -      -      -        -    -        0      0   
+999  enet  100999     1500  -      -      -        -    -        0      0   
+1002 fddi  101002     1500  -      -      -        -    -        0      0   
+1003 tr    101003     1500  -      -      -        -    -        0      0   
+1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
+1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
+
+Remote SPAN VLANs
+------------------------------------------------------------------------------
+
+
+Primary Secondary Type              Ports
+------- --------- ----------------- ------------------------------------------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show vlans
+No Virtual LANs configured.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show vlan summary
+Number of existing VLANs               : 8
+ Number of existing VTP VLANs          : 8
+ Number of existing extended VLANS     : 0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show spanning-tree
+VLAN0001
+  Spanning tree enabled protocol ieee
+  Root ID    Priority    1
+             Address     5001.0003.0000
+             This bridge is the root
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    1      (priority 0 sys-id-ext 1)
+             Address     5001.0003.0000
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+             Aging Time  300 sec
+
+Interface           Role Sts Cost      Prio.Nbr Type
+------------------- ---- --- --------- -------- --------------------------------
+Gi0/0               Desg FWD 4         128.1    P2p 
+Gi0/3               Desg FWD 4         128.4    P2p 
+Gi1/0               Desg FWD 4         128.5    P2p 
+Gi1/1               Desg FWD 4         128.6    P2p 
+Gi1/2               Desg FWD 4         128.7    P2p 
+Gi1/3               Desg FWD 4         128.8    P2p 
+
+
+
+VLAN0011
+  Spanning tree enabled protocol ieee
+  Root ID    Priority    11
+             Address     5001.0003.0000
+             This bridge is the root
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    11     (priority 0 sys-id-ext 11)
+             Address     5001.0003.0000
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+             Aging Time  300 sec
+
+Interface           Role Sts Cost      Prio.Nbr Type
+------------------- ---- --- --------- -------- --------------------------------
+Gi0/1               Desg FWD 4         128.2    P2p Edge 
+
+
+
+VLAN0100
+  Spanning tree enabled protocol ieee
+  Root ID    Priority    100
+             Address     5001.0003.0000
+             This bridge is the root
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    100    (priority 0 sys-id-ext 100)
+             Address     5001.0003.0000
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+             Aging Time  300 sec
+
+Interface           Role Sts Cost      Prio.Nbr Type
+------------------- ---- --- --------- -------- --------------------------------
+Gi0/2               Desg FWD 4         128.3    P2p
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Multicast
+
+Results of command: show ip pim interface
+Address          Interface                Ver/   Nbr    Query  DR         DR
+                                          Mode   Count  Intvl  Prior
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show ip pim rp
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show ip igmp groups
+IGMP Connected Group Membership
+Group Address    Interface                Uptime    Expires   Last Reporter   Group Accounted
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show ip mroute
+IP Multicast Forwarding is not enabled.
+IP Multicast Routing Table
+Flags: D - Dense, S - Sparse, B - Bidir Group, s - SSM Group, C - Connected,
+       L - Local, P - Pruned, R - RP-bit set, F - Register flag,
+       T - SPT-bit set, J - Join SPT, M - MSDP created entry, E - Extranet,
+       X - Proxy Join Timer Running, A - Candidate for MSDP Advertisement,
+       U - URD, I - Received Source Specific Host Report, 
+       Z - Multicast Tunnel, z - MDT-data group sender, 
+       Y - Joined MDT-data group, y - Sending to MDT-data group, 
+       G - Received BGP C-Mroute, g - Sent BGP C-Mroute, 
+       N - Received BGP Shared-Tree Prune, n - BGP C-Mroute suppressed, 
+       Q - Received BGP S-A Route, q - Sent BGP S-A Route, 
+       V - RD & Vector, v - Vector, p - PIM Joins on route, 
+       x - VxLAN group
+Outgoing interface flags: H - Hardware switched, A - Assert winner, p - PIM Join
+ Timers: Uptime/Expires
+ Interface state: Interface, Next-Hop or VCD, State/Mode
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show ip pim neighbor
+PIM Neighbor Table
+Mode: B - Bidir Capable, DR - Designated Router, N - Default DR Priority,
+      P - Proxy Capable, S - State Refresh Capable, G - GenID Capable,
+      L - DR Load-balancing Capable
+Neighbor          Interface                Uptime/Expires    Ver   DR
+Address                                                            Prio/Mode
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Neighbors
+
+Results of command: show ip arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  192.168.1.0           126   5001.0001.0001  ARPA   Vlan11
+Internet  192.168.1.1             -   5001.0003.800b  ARPA   Vlan11
+Internet  192.168.2.0             -   5001.0003.8064  ARPA   Vlan100
+Internet  192.168.2.1           126   5001.0004.8064  ARPA   Vlan100
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show mac address-table
+Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+  11    5001.0001.0001    DYNAMIC     Gi0/1
+ 100    5001.0004.8064    DYNAMIC     Gi0/2
+Total Mac Addresses for this criterion: 2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show lldp neighbor
+% LLDP is not enabled
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+Router01.jmctsm.local
+                 Gig 0/1           144              R B             Gig 0/1
+Switch02.jmctsm.local
+                 Gig 0/2           147             R S I            Gig 0/1
+
+Total cdp entries displayed : 2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Configurations
+
+Results of command: show running-config
+Building configuration...
+
+Current configuration : 2697 bytes
+!
+! Last configuration change at 15:35:43 UTC Tue Mar 5 2024 by jmctsm
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname Switch01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+username jmctsm privilege 15 secret 5 $1$NHt/$FwfiTMxERlQpHsceZLRak0
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+no ip domain-lookup
+ip domain-name jmctsm.local
+ip cef
+no ipv6 cef
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+spanning-tree vlan 1-4094 priority 0
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 192.168.254.11 255.255.255.255
+!
+interface Loopback100
+ ip address 192.168.254.111 255.255.255.255
+!
+interface GigabitEthernet0/0
+ negotiation auto
+!
+interface GigabitEthernet0/1
+ switchport access vlan 11
+ switchport mode access
+ negotiation auto
+ spanning-tree portfast edge
+!
+interface GigabitEthernet0/2
+ switchport trunk allowed vlan 100
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 999
+ switchport mode trunk
+ negotiation auto
+!
+interface GigabitEthernet0/3
+ negotiation auto
+!
+interface GigabitEthernet1/0
+ negotiation auto
+!
+interface GigabitEthernet1/1
+ negotiation auto
+!
+interface GigabitEthernet1/2
+ negotiation auto
+!
+interface GigabitEthernet1/3
+ negotiation auto
+!
+interface Vlan11
+ ip address 192.168.1.1 255.255.255.254
+!
+interface Vlan100
+ ip address 192.168.2.0 255.255.255.254
+!
+!
+router eigrp 100
+ network 192.168.2.0 0.0.0.0
+ network 192.168.254.11 0.0.0.0
+!
+router ospf 100
+ router-id 192.168.254.11
+ network 192.168.1.1 0.0.0.0 area 0
+ network 192.168.254.11 0.0.0.0 area 0
+!
+router bgp 65011
+ bgp router-id interface Loopback0
+ bgp log-neighbor-changes
+ no bgp default ipv4-unicast
+ neighbor 192.168.1.0 remote-as 65010
+ neighbor 192.168.254.12 remote-as 65011
+ neighbor 192.168.254.12 update-source Loopback0
+ !
+ address-family ipv4
+  network 192.168.2.0 mask 255.255.255.254
+  network 192.168.254.111 mask 255.255.255.255
+  neighbor 192.168.1.0 activate
+  neighbor 192.168.1.0 send-community both
+  neighbor 192.168.254.12 activate
+  neighbor 192.168.254.12 send-community both
+  neighbor 192.168.254.12 next-hop-self
+ exit-address-family
+!
+ip forward-protocol nd
+!
+ip bgp-community new-format
+ip http server
+ip http secure-server
+!
+ip ssh version 2
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ logging synchronous
+ login local
+line aux 0
+line vty 0 4
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 1500
+ logging synchronous
+ login local
+ transport input ssh
+!
+!
+end
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show startup-config
+Using 1561 out of 262144 bytes, uncompressed size = 2697 bytes
+!
+! Last configuration change at 15:35:43 UTC Tue Mar 5 2024 by jmctsm
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname Switch01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+username jmctsm privilege 15 secret 5 $1$NHt/$FwfiTMxERlQpHsceZLRak0
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+no ip domain-lookup
+ip domain-name jmctsm.local
+ip cef
+no ipv6 cef
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+spanning-tree vlan 1-4094 priority 0
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 192.168.254.11 255.255.255.255
+!
+interface Loopback100
+ ip address 192.168.254.111 255.255.255.255
+!
+interface GigabitEthernet0/0
+ negotiation auto
+!
+interface GigabitEthernet0/1
+ switchport access vlan 11
+ switchport mode access
+ negotiation auto
+ spanning-tree portfast edge
+!
+interface GigabitEthernet0/2
+ switchport trunk allowed vlan 100
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 999
+ switchport mode trunk
+ negotiation auto
+!
+interface GigabitEthernet0/3
+ negotiation auto
+!
+interface GigabitEthernet1/0
+ negotiation auto
+!
+interface GigabitEthernet1/1
+ negotiation auto
+!
+interface GigabitEthernet1/2
+ negotiation auto
+!
+interface GigabitEthernet1/3
+ negotiation auto
+!
+interface Vlan11
+ ip address 192.168.1.1 255.255.255.254
+!
+interface Vlan100
+ ip address 192.168.2.0 255.255.255.254
+!
+!
+router eigrp 100
+ network 192.168.2.0 0.0.0.0
+ network 192.168.254.11 0.0.0.0
+!
+router ospf 100
+ router-id 192.168.254.11
+ network 192.168.1.1 0.0.0.0 area 0
+ network 192.168.254.11 0.0.0.0 area 0
+!
+router bgp 65011
+ bgp router-id interface Loopback0
+ bgp log-neighbor-changes
+ no bgp default ipv4-unicast
+ neighbor 192.168.1.0 remote-as 65010
+ neighbor 192.168.254.12 remote-as 65011
+ neighbor 192.168.254.12 update-source Loopback0
+ !
+ address-family ipv4
+  network 192.168.2.0 mask 255.255.255.254
+  network 192.168.254.111 mask 255.255.255.255
+  neighbor 192.168.1.0 activate
+  neighbor 192.168.1.0 send-community both
+  neighbor 192.168.254.12 activate
+  neighbor 192.168.254.12 send-community both
+  neighbor 192.168.254.12 next-hop-self
+ exit-address-family
+!
+ip forward-protocol nd
+!
+ip bgp-community new-format
+ip http server
+ip http secure-server
+!
+ip ssh version 2
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ logging synchronous
+ login local
+line aux 0
+line vty 0 4
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 1500
+ logging synchronous
+ login local
+ transport input ssh
+!
+!
+end
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Results of command: show running-config all
+Building configuration...
+
+Current configuration with default configurations exposed : 41318 bytes
+!
+! Last configuration change at 15:35:43 UTC Tue Mar 5 2024 by jmctsm
+!
+version 15.2
+parser cache
+parser config partition
+parser command serializer
+parser maximum utilization 100
+parser maximum latency 40
+downward-compatible-config 15.2
+no service log backtrace
+no service config
+no service exec-callback
+no service nagle
+service slave-log
+no service slave-coredump
+no service pad to-xot
+no service pad from-xot
+no service pad cmns
+service pad
+no service telnet-zeroidle
+no service tcp-keepalives-in
+no service tcp-keepalives-out
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+no service exec-wait
+no service linenumber
+no service internal
+no service log-hidden
+no service scripting
+service compress-config
+service prompt config
+no service old-slip-prompts
+no service pt-vty-logging
+no service disable-ip-fast-frag
+no service sequence-numbers
+service counters max age 0
+service dhcp
+!
+hostname Switch01
+!
+boot-start-marker
+boot bootldr 
+boot-end-marker
+!
+shell processing
+!
+no logging discriminator
+logging exception 8192
+no logging count
+no logging message-counter log
+no logging message-counter debug
+logging message-counter syslog
+no logging snmp-authfail
+no logging userinfo
+logging buginf
+logging queue-limit 100
+logging queue-limit esm 0
+logging queue-limit trap 100
+logging buffered 8192 debugging
+logging reload message-limit 1000 notifications
+no logging persistent
+logging rate-limit console 10 except errors
+no logging console guaranteed
+logging console debugging
+logging monitor debugging
+logging cns-events informational
+logging on
+!
+username jmctsm privilege 15 secret 5 $1$NHt/$FwfiTMxERlQpHsceZLRak0
+spd extended-headroom 10
+spd headroom 100
+spd enable
+no aaa new-model
+ethernet cfm ieee 
+ethernet cfm alarm notification mac-remote-error-xcon
+ethernet cfm alarm delay 2500
+ethernet cfm alarm packet 0
+ethernet cfm alarm reset 10000
+ipc holdq threshold upper 0
+ipc holdq threshold lower 0
+ipc header-cache permanent 1000 100
+ipc buffers max-free 8
+ipc buffers min-free 1
+ipc buffers permanent 2
+process cpu extended history 12
+process cpu autoprofile hog
+cef table consistency-check IPv4 type scan-rib-ios count 1000 period 60
+cef table consistency-check IPv4 type scan-ios-rib count 1000 period 60
+no cef table consistency-check IPv4 data-checking
+no cef table consistency-check IPv4 error-message
+cef table consistency-check IPv4 auto-repair delay 10 holddown 300
+cef table consistency-check IPv6 type scan-ios-rib count 1000 period 60
+no cef table consistency-check IPv6 data-checking
+no cef table consistency-check IPv6 error-message
+cef table consistency-check IPv6 auto-repair delay 10 holddown 300
+cef table vrf tree IPv4 type MTRIE short-mask-protection 4 stride-pattern 8-8-8-8 hardware-api-notify off
+cef table vrf tree IPv6 type RTREE
+cef table output-chain build favor default
+cef table rate-monitor-period 5
+device-sensor notify new-tlvs
+no eap key-name compliance
+location prefer static weight 0
+location prefer lldp-med weight 2
+!
+!
+!
+!
+!
+nmsp notification interval attachment 30
+nmsp notification interval location 30
+l2tp tunnel l2tpv3 accounting headers
+no cisp enable
+no feature openflow
+ip subnet-zero
+ip source-route
+no ip host-mode extended
+ip routing protocol purge interface
+ip routing
+ip arp poll queue 1000
+ip arp poll rate 1000
+no ip arp proxy disable
+ip arp gleaning tftp
+ip arp gleaning udp
+ip arp incomplete retry 20
+ip arp incomplete entries 5000
+ip arp incomplete enable
+ip arp inspection log-buffer entries 32
+ip arp inspection log-buffer logs 5 interval 1
+ip sticky-arp
+ip gratuitous-arps non-local
+ip icmp redirect subnet
+ip spd queue max-threshold 74
+ip spd queue min-threshold 73
+ip verify drop-rate compute window 300
+ip verify drop-rate compute interval 30
+ip verify drop-rate notify hold-down 300
+ip admission ratelimit 100
+no ip admission watch-list enable
+ip admission watch-list expiry-time 10
+ip admission max-login-attempts 5
+ip admission init-state-time 2
+no ip admission auth-proxy-audit
+ip admission inactivity-timer 60
+ip admission absolute-timer 0
+!
+ip sap cache-timeout 1440
+ip multicast route-limit 2147483647
+ip mfib
+ip dhcp relay information policy replace
+ip dhcp relay information check
+ip dhcp relay override giaddr link-selection
+ip dhcp use class
+ip dhcp use vrf connected
+ip dhcp binding cleanup interval 120
+ip dhcp compatibility suboption link-selection cisco
+ip dhcp conflict logging
+ip dhcp ping packets 2
+ip dhcp ping timeout 500
+!
+!
+no ip dhcp snooping information option allow-untrusted
+ip dhcp snooping information option
+no ip dhcp snooping database 
+ip dhcp snooping database write-delay 300
+ip dhcp snooping database timeout 300
+ip dhcp snooping verify mac-address
+ip dhcp snooping verify no-relay-agent-address
+no ip dhcp snooping wireless bootp-broadcast enable
+ip flow-cache entries 4096
+ip flow-cache timeout inactive 15
+ip flow-cache timeout active 30
+ip bootp server
+no  ip domain round-robin
+ip domain multicast in-addr.arpa
+no ip domain-lookup
+ip domain-lookup nsap
+ip domain-name jmctsm.local
+no ip hostname strict
+ip pgm router elimination-interval 2
+ip pgm host ttl 255
+ip pgm host stream-type apdu
+ip pgm host nak-gen-ivl 60000
+ip pgm host nak-rb-ivl 500
+ip pgm host nak-rpt-ivl 2000
+ip pgm host nak-rdata-ivl 2000
+ip pgm host rx-buffer-mgmt minimum
+ip pgm host tpdu-size 1400
+ip pgm host ihb-min 1000
+ip pgm host ihb-max 10000 
+ip pgm host join 0
+ip pgm host spm-ambient-ivl 6000
+ip pgm host txw-adv-secs 6000
+ip pgm host txw-adv-timeout-max 3600000
+ip pgm host txw-rte 16384
+ip pgm host txw-secs 30000
+ip pgm host ncf-max 4294967295
+ip pgm host spm-rpt-ivl 3000
+ip pgm host tx-buffer-mgmt return
+ip pgm host txw-adv-method time
+ ip dhcp-client broadcast-flag
+ip dhcp-client default-router distance 254
+ip device tracking probe count 3
+ip device tracking probe interval 30
+ip device tracking probe delay 0
+ip device tracking trace-buffer
+ip accounting-threshold 512
+ip cef optimize neighbor resolution
+ip cef
+no ip cef accounting 
+ip cef load-sharing algorithm universal 720B0D66
+ip igmp ssm-map query dns
+ip igmp snooping report-suppression
+no ip igmp snooping tcn query solicit
+ip igmp snooping tcn flood query count 2
+ip igmp snooping robustness-variable 2
+ip igmp snooping last-member-query-count 2
+ip igmp snooping last-member-query-interval 1000
+ip igmp snooping
+ntp max-associations 100
+ipv6 hop-limit 64
+ipv6 icmp error-interval 100 10
+ipv6 nd cache expire
+no ipv6 nd ra solicited unicast
+ipv6 nd nsf convergence 120
+ipv6 nd nsf throttle 512
+ipv6 nd nsf dad suppress 60
+ipv6 nd nud limit 256 refresh 10
+ipv6 nd reachable-time 0
+ipv6 nd ns-interval 0
+ipv6 nd resolution data limit 16
+ipv6 nd default-route limit 4
+ipv6 nd dad time 0
+ipv6 nd dad loopback detect
+ipv6 traffic interface-statistics
+no ipv6 snooping logging packet drop
+no ipv6 snooping logging theft
+no ipv6 snooping logging resolution-veto
+ipv6 dhcp-relay trust-all
+no ipv6 dhcp-relay option vpn
+ipv6 dhcp ping packets 0
+ipv6 dhcp iapd-route-add
+no ipv6 dhcp iana-route-add
+no ipv6 dhcp server vrf enable
+ipv6 mfib
+ipv6 rip vrf-mode enable
+ipv6 multicast multipath
+ipv6 multicast rpf use-bgp
+ipv6 cef optimize neighbor resolution
+no ipv6 cef
+ipv6 cef load-sharing algorithm universal 720B0D66
+kerberos timeout 15
+kerberos retry 4
+kerberos processes 1
+no authentication logging verbose
+authentication critical recovery delay 100
+authentication command bounce-port ignore
+authentication command disable-port ignore
+access-session vlan-assignment ignore-errors
+no access-session interface-template sticky
+no mab request format attribute 1
+no mab request format attribute 2
+no mab request format attribute 32
+no mab logging verbose
+no ipv6 neighbor tracking
+frame-relay address registration auto-address
+mpls label range 16 100000
+mpls oam
+ echo revision 4
+ echo vendor-extension
+no mpls export vpnv4 prefixes
+no mpls export interval
+no mpls discovery vpn interval
+no mpls discovery vpn next-hop
+mpls ip propagate-ttl
+l2 traceroute
+clns configuration-time 60
+clns holding-time 300
+clns packet-lifetime 64
+clns security pass-through
+no clns want-erpdu
+isis display delimiter return 1
+no metadata flow transmit
+scripting tcl low-memory 193843424
+no virtual-template subinterface
+no virtual-template snmp
+!
+!
+crypto pki crl download schedule prepublish 0
+crypto pki crl download schedule retries 5
+crypto pki crl download schedule retries interval 30
+crypto pki crl cache size 64
+cts server deadtime 20
+cts server test all enable
+cts server test all idle-time 60
+cts server test all deadtime 20
+no cts server key-wrap enable
+no cts cache enable
+cts dot1x-server-timeout 30
+cts dot1x-supp-timeout 30
+no cts logging verbose
+no cts sxp enable
+cts sxp retry period 120
+cts sxp reconciliation period 120
+no cts sxp log binding-changes
+cts sxp mapping network-map 0
+
+cts sxp speaker hold-time 120
+
+
+cts sxp listener hold-time 90 180
+
+cts sxp node-id 0
+no dot1x logging verbose
+dot1x auth-fail eapol
+dot1x guest-vlan supplicant
+dot1x supplicant force-multicast
+dot1x supplicant controlled transient
+no dot1x critical eapol
+no dot1x critical eapol block
+no file verify auto
+lacp system-priority 32768
+port-channel load-balance src-dst-ip
+port-channel auto
+memory check-interval 60
+memory statistics history table 24
+memory validate-checksum 60
+memory lite
+memory chunk siblings threshold 10000
+!
+spanning-tree mode pvst
+no spanning-tree dispute
+spanning-tree bridge assurance
+spanning-tree transmit hold-count 6
+no spanning-tree optimize bpdu transmission
+spanning-tree queue maxsize 12288
+spanning-tree etherchannel guard misconfig
+spanning-tree extend system-id
+spanning-tree uplinkfast max-update-rate 3
+spanning-tree pathcost method short
+spanning-tree mst simulate pvst global
+spanning-tree vlan 1-4094 priority 0
+!
+crypto engine software ipsec
+no crypto engine software isakmp
+!
+process-max-time 200
+!
+cdp advertise-v2
+cdp timer 60
+cdp holdtime 180
+cdp run
+cdp tlv location
+cdp tlv app
+!
+! 
+crypto ikev2 authorization policy default
+ route set interface
+ route accept any
+!
+crypto ikev2 proposal default
+ encryption aes-cbc-256 aes-cbc-192 aes-cbc-128
+ integrity sha512 sha384 sha256 sha1 md5
+ group 5 2
+!
+crypto ikev2 policy default
+ match fvrf any
+ proposal default
+!
+crypto ikev2 nat keepalive 0
+crypto ikev2 diagnose error 50
+crypto ikev2 dpd 0 0 periodic
+crypto ikev2 limit max-in-negotation-sa 400 outgoing
+crypto ikev2 limit max-in-negotation-sa 40
+crypto ikev2 limit max-sa 0
+crypto ikev2 window 5
+crypto ikev2 fragmentation mtu 576
+crypto isakmp diagnose error 50
+crypto ipsec optional retry 300
+!
+crypto ipsec security-association lifetime kilobytes 4608000
+crypto ipsec security-association lifetime seconds 3600
+no crypto ipsec security-association replay disable
+crypto ipsec security-association replay window-size 64
+crypto ipsec security-association dummy
+crypto ipsec security-association ecn discard
+!
+crypto ipsec transform-set default esp-aes esp-sha-hmac 
+ mode transport
+crypto ipsec nat-transparency udp-encapsulation
+!
+crypto ipsec profile default
+ no set security-association dfbit
+ set security-association lifetime kilobytes 4608000
+ set security-association lifetime seconds 3600
+ no set security-association idle-time
+ no set security-association replay window-size 
+ set security-association dummy
+ set security-association ecn
+!
+!
+crypto call admission limit ike sa 0
+crypto call admission limit ike in-negotiation-sa 1000
+crypto call admission limit ipsec sa 0
+crypto mib ipsec flowmib history tunnel size 200
+crypto mib ipsec flowmib history failure size 200
+!
+buffers element permanent 1000
+buffers element minimum 100
+buffers header permanent 256
+buffers header max-free 512
+buffers header min-free 64
+buffers header initial 0
+buffers fastswitching permanent 3072
+buffers fastswitching max-free 4096
+buffers fastswitching min-free 512
+buffers fastswitching initial 0
+buffers small permanent 512
+buffers small max-free 2048
+buffers small min-free 100
+buffers small initial 0
+buffers middle permanent 512
+buffers middle max-free 2048
+buffers middle min-free 100
+buffers middle initial 0
+buffers big permanent 512
+buffers big max-free 1024
+buffers big min-free 100
+buffers big initial 0
+buffers verybig permanent 10
+buffers verybig max-free 100
+buffers verybig min-free 0
+buffers verybig initial 0
+buffers large permanent 0
+buffers large max-free 10
+buffers large min-free 0
+buffers large initial 0
+buffers huge permanent 0
+buffers huge max-free 4
+buffers huge min-free 0
+buffers huge size 18024
+buffers huge initial 0
+no buffers tune automatic
+buffers GigabitEthernet0/0 permanent 2048
+buffers GigabitEthernet0/0 max-free 2048
+buffers GigabitEthernet0/0 min-free 2048
+buffers GigabitEthernet0/0 initial 0
+buffers GigabitEthernet0/1 permanent 2048
+buffers GigabitEthernet0/1 max-free 2048
+buffers GigabitEthernet0/1 min-free 2048
+buffers GigabitEthernet0/1 initial 0
+buffers GigabitEthernet0/2 permanent 2048
+buffers GigabitEthernet0/2 max-free 2048
+buffers GigabitEthernet0/2 min-free 2048
+buffers GigabitEthernet0/2 initial 0
+buffers GigabitEthernet0/3 permanent 2048
+buffers GigabitEthernet0/3 max-free 2048
+buffers GigabitEthernet0/3 min-free 2048
+buffers GigabitEthernet0/3 initial 0
+buffers GigabitEthernet1/0 permanent 2048
+buffers GigabitEthernet1/0 max-free 2048
+buffers GigabitEthernet1/0 min-free 2048
+buffers GigabitEthernet1/0 initial 0
+buffers GigabitEthernet1/1 permanent 2048
+buffers GigabitEthernet1/1 max-free 2048
+buffers GigabitEthernet1/1 min-free 2048
+buffers GigabitEthernet1/1 initial 0
+buffers GigabitEthernet1/2 permanent 2048
+buffers GigabitEthernet1/2 max-free 2048
+buffers GigabitEthernet1/2 min-free 2048
+buffers GigabitEthernet1/2 initial 0
+buffers GigabitEthernet1/3 permanent 2048
+buffers GigabitEthernet1/3 max-free 2048
+buffers GigabitEthernet1/3 min-free 2048
+buffers GigabitEthernet1/3 initial 0
+!
+!
+!
+no autoconf enable
+!
+!
+!
+interface Loopback0
+ mtu 1514
+ ip address 192.168.254.11 255.255.255.255
+ ip redirects
+ ip unreachables
+ ip proxy-arp
+ ip mtu 1514
+ ip pim join-prune-interval 60
+ ip pim dr-priority 1
+ ip pim query-interval 30
+ ip mfib forwarding input
+ ip mfib forwarding output
+ ip mfib cef input
+ ip mfib cef output
+ ip cef accounting non-recursive internal
+ ip load-sharing per-destination
+ ip route-cache cef
+ ip route-cache
+ ip split-horizon
+ ip igmp last-member-query-interval 1000
+ ip igmp last-member-query-count 2
+ ip igmp query-max-response-time 10
+ ip igmp v3-query-max-response-time 10
+ ip igmp version 2
+ ip igmp query-interval 60
+ ip igmp tcn query count 2
+ ip igmp tcn query interval 10
+ ip ospf resync-timeout 40
+ ip ospf dead-interval 40
+ ip ospf hello-interval 10
+ ip ospf retransmit-interval 5
+ ip ospf transmit-delay 1
+ no ip ospf flood-reduction
+ no ip ospf demand-circuit
+ no ip ospf mtu-ignore
+ no ip ospf database-filter all out
+ ip ospf cost 1
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ tx-ring-limit 0
+ tx-queue-limit 0
+ no macsec replay-protection
+ no macsec
+ ipv6 nd reachable-time 0
+ ipv6 nd ns-interval 0
+ ipv6 nd dad loopback detect
+ ipv6 nd prefix framed-ipv6-prefix
+ ipv6 nd nud igp
+ no ipv6 nd ra solicited unicast
+ ipv6 nd ra lifetime 1800
+ ipv6 nd ra interval 200
+  ipv6 redirects
+  ipv6 unreachables
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1514
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ no arp arpa
+ arp timeout 0
+   clns route-cache
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 0 out
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+interface Loopback100
+ mtu 1514
+ ip address 192.168.254.111 255.255.255.255
+ ip redirects
+ ip unreachables
+ ip proxy-arp
+ ip mtu 1514
+ ip pim join-prune-interval 60
+ ip pim dr-priority 1
+ ip pim query-interval 30
+ ip mfib forwarding input
+ ip mfib forwarding output
+ ip mfib cef input
+ ip mfib cef output
+ ip cef accounting non-recursive internal
+ ip load-sharing per-destination
+ ip route-cache cef
+ ip route-cache
+ ip split-horizon
+ ip igmp last-member-query-interval 1000
+ ip igmp last-member-query-count 2
+ ip igmp query-max-response-time 10
+ ip igmp v3-query-max-response-time 10
+ ip igmp version 2
+ ip igmp query-interval 60
+ ip igmp tcn query count 2
+ ip igmp tcn query interval 10
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ tx-ring-limit 0
+ tx-queue-limit 0
+ no macsec replay-protection
+ no macsec
+ ipv6 nd reachable-time 0
+ ipv6 nd ns-interval 0
+ ipv6 nd dad loopback detect
+ ipv6 nd prefix framed-ipv6-prefix
+ ipv6 nd nud igp
+ no ipv6 nd ra solicited unicast
+ ipv6 nd ra lifetime 1800
+ ipv6 nd ra interval 200
+  ipv6 redirects
+  ipv6 unreachables
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1514
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ no arp arpa
+ arp timeout 0
+   clns route-cache
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 0 out
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+interface GigabitEthernet0/0
+ switchport
+ switchport access vlan 1
+ no switchport nonegotiate
+ no switchport protected
+ no switchport port-security mac-address sticky
+ no ip arp inspection trust
+ ip arp inspection limit rate 15 burst interval 1
+ ip arp inspection limit rate 15
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ tx-ring-limit 2048
+ tx-queue-limit 2048
+ negotiation auto
+ no macsec replay-protection
+ no macsec
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1500
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ mka default-policy
+ cdp tlv location
+ cdp tlv server-location 
+ cdp tlv app
+ arp arpa
+ arp timeout 14400
+ channel-group auto
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 0 out
+ ip igmp snooping tcn flood
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+interface GigabitEthernet0/1
+ switchport
+ switchport access vlan 11
+ switchport mode access
+ no switchport nonegotiate
+ no switchport protected
+ no switchport port-security mac-address sticky
+ no ip arp inspection trust
+ ip arp inspection limit rate 15 burst interval 1
+ ip arp inspection limit rate 15
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ tx-ring-limit 2048
+ tx-queue-limit 2048
+ negotiation auto
+ no macsec replay-protection
+ no macsec
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1500
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ mka default-policy
+ cdp tlv location
+ cdp tlv server-location 
+ cdp tlv app
+ arp arpa
+ arp timeout 14400
+ channel-group auto
+ spanning-tree portfast disable
+ spanning-tree portfast edge trunk
+ spanning-tree portfast edge
+ spanning-tree portfast network
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 0 out
+ ip igmp snooping tcn flood
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+interface GigabitEthernet0/2
+ switchport
+ switchport access vlan 1
+ switchport trunk allowed vlan 100
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 999
+ switchport mode trunk
+ no switchport nonegotiate
+ no switchport protected
+ no switchport port-security mac-address sticky
+ no ip arp inspection trust
+ ip arp inspection limit rate 15 burst interval 1
+ ip arp inspection limit rate 15
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ tx-ring-limit 2048
+ tx-queue-limit 2048
+ negotiation auto
+ no macsec replay-protection
+ no macsec
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1500
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ mka default-policy
+ cdp tlv location
+ cdp tlv server-location 
+ cdp tlv app
+ arp arpa
+ arp timeout 14400
+ channel-group auto
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 0 out
+ ip igmp snooping tcn flood
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+interface GigabitEthernet0/3
+ switchport
+ switchport access vlan 1
+ no switchport nonegotiate
+ no switchport protected
+ no switchport port-security mac-address sticky
+ no ip arp inspection trust
+ ip arp inspection limit rate 15 burst interval 1
+ ip arp inspection limit rate 15
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ tx-ring-limit 2048
+ tx-queue-limit 2048
+ negotiation auto
+ no macsec replay-protection
+ no macsec
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1500
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ mka default-policy
+ cdp tlv location
+ cdp tlv server-location 
+ cdp tlv app
+ arp arpa
+ arp timeout 14400
+ channel-group auto
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 0 out
+ ip igmp snooping tcn flood
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+interface GigabitEthernet1/0
+ switchport
+ switchport access vlan 1
+ no switchport nonegotiate
+ no switchport protected
+ no switchport port-security mac-address sticky
+ no ip arp inspection trust
+ ip arp inspection limit rate 15 burst interval 1
+ ip arp inspection limit rate 15
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ tx-ring-limit 2048
+ tx-queue-limit 2048
+ negotiation auto
+ no macsec replay-protection
+ no macsec
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1500
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ mka default-policy
+ cdp tlv location
+ cdp tlv server-location 
+ cdp tlv app
+ arp arpa
+ arp timeout 14400
+ channel-group auto
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 0 out
+ ip igmp snooping tcn flood
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+interface GigabitEthernet1/1
+ switchport
+ switchport access vlan 1
+ no switchport nonegotiate
+ no switchport protected
+ no switchport port-security mac-address sticky
+ no ip arp inspection trust
+ ip arp inspection limit rate 15 burst interval 1
+ ip arp inspection limit rate 15
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ tx-ring-limit 2048
+ tx-queue-limit 2048
+ negotiation auto
+ no macsec replay-protection
+ no macsec
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1500
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ mka default-policy
+ cdp tlv location
+ cdp tlv server-location 
+ cdp tlv app
+ arp arpa
+ arp timeout 14400
+ channel-group auto
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 0 out
+ ip igmp snooping tcn flood
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+interface GigabitEthernet1/2
+ switchport
+ switchport access vlan 1
+ no switchport nonegotiate
+ no switchport protected
+ no switchport port-security mac-address sticky
+ no ip arp inspection trust
+ ip arp inspection limit rate 15 burst interval 1
+ ip arp inspection limit rate 15
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ tx-ring-limit 2048
+ tx-queue-limit 2048
+ negotiation auto
+ no macsec replay-protection
+ no macsec
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1500
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ mka default-policy
+ cdp tlv location
+ cdp tlv server-location 
+ cdp tlv app
+ arp arpa
+ arp timeout 14400
+ channel-group auto
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 0 out
+ ip igmp snooping tcn flood
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+interface GigabitEthernet1/3
+ switchport
+ switchport access vlan 1
+ no switchport nonegotiate
+ no switchport protected
+ no switchport port-security mac-address sticky
+ no ip arp inspection trust
+ ip arp inspection limit rate 15 burst interval 1
+ ip arp inspection limit rate 15
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ tx-ring-limit 2048
+ tx-queue-limit 2048
+ negotiation auto
+ no macsec replay-protection
+ no macsec
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1500
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ mka default-policy
+ cdp tlv location
+ cdp tlv server-location 
+ cdp tlv app
+ arp arpa
+ arp timeout 14400
+ channel-group auto
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 0 out
+ ip igmp snooping tcn flood
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+interface Vlan11
+ ip address 192.168.1.1 255.255.255.254
+ ip redirects
+ ip unreachables
+ ip proxy-arp
+ ip mtu 1500
+ ip pim join-prune-interval 60
+ ip pim dr-priority 1
+ ip pim query-interval 30
+ ip mfib forwarding input
+ ip mfib forwarding output
+ ip mfib cef input
+ ip mfib cef output
+ ip cef accounting non-recursive internal
+ ip load-sharing per-destination
+ ip route-cache cef
+ ip route-cache
+ ip split-horizon
+ ip igmp last-member-query-interval 1000
+ ip igmp last-member-query-count 2
+ ip igmp query-max-response-time 10
+ ip igmp v3-query-max-response-time 10
+ ip igmp version 2
+ ip igmp query-interval 60
+ ip igmp tcn query count 2
+ ip igmp tcn query interval 10
+ ip ospf network broadcast
+ ip ospf resync-timeout 40
+ ip ospf dead-interval 40
+ ip ospf hello-interval 10
+ ip ospf priority 1
+ ip ospf retransmit-interval 5
+ ip ospf transmit-delay 1
+ no ip ospf flood-reduction
+ no ip ospf demand-circuit
+ no ip ospf mtu-ignore
+ no ip ospf database-filter all out
+ ip ospf cost 1
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ no macsec replay-protection
+ no macsec
+ ipv6 nd reachable-time 0
+ ipv6 nd ns-interval 0
+ ipv6 nd dad attempts 1
+ ipv6 nd dad loopback detect
+ ipv6 nd prefix framed-ipv6-prefix
+ ipv6 nd nud igp
+ no ipv6 nd ra solicited unicast
+ ipv6 nd ra lifetime 1800
+ ipv6 nd ra interval 200
+  ipv6 redirects
+  ipv6 unreachables
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1500
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ mka default-policy
+ arp arpa
+ arp timeout 14400
+   clns route-cache
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 40 out
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+interface Vlan100
+ ip address 192.168.2.0 255.255.255.254
+ ip redirects
+ ip unreachables
+ ip proxy-arp
+ ip mtu 1500
+ ip pim join-prune-interval 60
+ ip pim dr-priority 1
+ ip pim query-interval 30
+ ip mfib forwarding input
+ ip mfib forwarding output
+ ip mfib cef input
+ ip mfib cef output
+ ip cef accounting non-recursive internal
+ ip load-sharing per-destination
+ ip route-cache cef
+ ip route-cache
+ ip split-horizon
+ ip igmp last-member-query-interval 1000
+ ip igmp last-member-query-count 2
+ ip igmp query-max-response-time 10
+ ip igmp v3-query-max-response-time 10
+ ip igmp version 2
+ ip igmp query-interval 60
+ ip igmp tcn query count 2
+ ip igmp tcn query interval 10
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ no macsec replay-protection
+ no macsec
+ ipv6 nd reachable-time 0
+ ipv6 nd ns-interval 0
+ ipv6 nd dad attempts 1
+ ipv6 nd dad loopback detect
+ ipv6 nd prefix framed-ipv6-prefix
+ ipv6 nd nud igp
+ no ipv6 nd ra solicited unicast
+ ipv6 nd ra lifetime 1800
+ ipv6 nd ra interval 200
+  ipv6 redirects
+  ipv6 unreachables
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ mpls mtu 1500
+ snmp trap link-status
+ no onep application openflow exclusive
+ cts role-based enforcement
+ mka default-policy
+ arp arpa
+ arp timeout 14400
+   clns route-cache
+ spanning-tree port-priority 128
+ spanning-tree cost 0
+ hold-queue 75 in
+ hold-queue 40 out
+ no bgp-policy accounting input
+ no bgp-policy accounting output
+ no bgp-policy accounting input source
+ no bgp-policy accounting output source
+ no bgp-policy source ip-prec-map
+ no bgp-policy source ip-qos-map
+ no bgp-policy destination ip-prec-map
+ no bgp-policy destination ip-qos-map
+!
+!
+router eigrp 100
+ timers active-time 3
+ timers graceful-restart purge-time 240
+ metric maximum-hops 100
+ metric weights 0 1 0 1 0 0
+ traffic-share balanced
+ variance 1
+ network 192.168.2.0 0.0.0.0
+ network 192.168.254.11 0.0.0.0
+ distance eigrp 90 170
+ no auto-summary
+ no passive-interface default
+ eigrp log-neighbor-changes
+ eigrp log-neighbor-warnings 10
+ eigrp event-log-size 500
+ no shutdown
+!
+router ospf 100
+ router-id 192.168.254.11
+ priority 64
+ queue-depth update 200
+ queue-depth hello unlimited
+ compatible rfc1583
+ no compatible rfc1587
+ no interface-id snmp-if-index
+ no ignore lsa mospf
+ no ispf
+ event-log size 1000
+ log-adjacency-changes
+ discard-route external 254 internal 110
+ no local-rib-criteria
+ auto-cost reference-bandwidth 100
+ limit retransmissions dc 24 non-dc 24
+ no shutdown
+ no prefix-suppression
+ nsf cisco helper
+ nsf ietf helper
+ capability opaque
+ capability lls
+ capability transit
+ no area 0 authentication
+ area 0 default-cost 1
+ timers throttle spf 5000 10000 10000
+ timers throttle lsa 0 5000 5000
+ timers lsa arrival 1000
+ timers pacing lsa-group 240
+ timers pacing flood 33
+ timers pacing retransmission 66
+ network 192.168.1.1 0.0.0.0 area 0
+ network 192.168.254.11 0.0.0.0 area 0
+ maximum-paths 4
+ default-metric 20
+ distance 110
+ no bfd all-interfaces
+!
+router bgp 65011
+ bgp router-id interface Loopback0
+ bgp fast-external-fallover
+ bgp route-map-cache
+ no bgp asnotation dot
+ bgp client-to-client reflection
+ bgp client-to-client reflection intra-cluster cluster-id any
+ bgp transport path-mtu-discovery
+ bgp enforce-first-as
+ bgp log-neighbor-changes
+ bgp dynamic-med-interval 600
+ bgp listen limit 100
+ bgp update-delay 120
+ bgp graceful-restart restart-time 120
+ bgp graceful-restart stalepath-time 360
+ bgp refresh stalepath-time 0
+ bgp refresh max-eor-time 0
+ bgp regexp deterministic
+ no bgp default ipv4-unicast
+ bgp default ipv6-nexthop
+ bgp default local-preference 100
+ bgp default route-target filter
+ timers bgp 60 180 0
+ neighbor 192.168.1.0 remote-as 65010
+ neighbor 192.168.254.12 remote-as 65011
+ neighbor 192.168.254.12 update-source Loopback0
+ !
+ address-family ipv4
+  no synchronization
+  bgp aggregate-timer 30
+  bgp update-group split as-override
+  bgp nexthop trigger enable
+  bgp nexthop trigger delay 5
+  bgp scan-time 60
+  network 192.168.2.0 mask 255.255.255.254
+  network 192.168.254.111 mask 255.255.255.255
+  neighbor 192.168.1.0 activate
+  neighbor 192.168.1.0 send-community both
+  neighbor 192.168.1.0 weight 0
+  neighbor 192.168.254.12 activate
+  neighbor 192.168.254.12 send-community both
+  neighbor 192.168.254.12 next-hop-self
+  neighbor 192.168.254.12 weight 0
+  distance bgp 20 200 200
+  no auto-summary
+ exit-address-family
+!
+ip classless
+ip forward-protocol nd
+!
+ip bgp-community new-format
+ip pim dm-fallback
+ip pim autorp
+ip pim bidir-offer-interval 100 msec
+ip pim bidir-offer-limit 3
+ip pim v1-rp-reachability
+ip pim log-neighbor-changes
+ip msdp timer 30
+no ip finger 
+no ip tcp ecn
+no ip tcp selective-ack
+no ip tcp timestamp
+ip tcp delayed-ack
+ip tcp chunk-size 0
+ip tcp mss 0
+ip tcp keepalive retries 4
+ip tcp keepalive interval 60
+ip tcp window-size 4128
+ip tcp queuemax 20
+ip tcp synwait-time 30
+no ip tcp path-mtu-discovery
+no ip tcp async-mobility server
+ip tcp RST-count 10 RST-window 5000
+ip tcp intercept fast
+ip tcp intercept connection-timeout 86400
+ip tcp intercept finrst-timeout 5
+ip tcp intercept watch-timeout 30
+ip tcp intercept max-incomplete low 900
+ip tcp intercept max-incomplete high 1100
+ip tcp intercept one-minute low 900
+ip tcp intercept one-minute high 1100
+ip tcp intercept mode intercept
+ip tcp intercept drop-mode oldest
+ip telnet tos C0
+no ip telnet quiet
+no ip telnet hidden hostnames
+no ip telnet hidden addresses
+ip telnet comport enable
+ip telnet comport flow level 16
+ip telnet comport receive window 4128
+ip telnet comport disconnect delay 0
+ip http server
+ip http port 80
+ip http authentication enable
+ip http secure-server
+ip http secure-port 443
+ip http secure-active-session-modules all
+ip http max-connections 16
+ip http timeout-policy idle 180 life 180 requests 25 
+ip http session-idle-timeout 180 
+ip http active-session-modules all
+ip http client cache memory pool 100
+ip http client cache memory file 2
+ip http client cache ager interval 5
+ip http client connection timeout 10
+ip http client connection retry 1
+ip http client connection idle timeout 30
+ip http client response timeout 30
+ip http path 
+!
+ip ftp passive
+ip tftp min-timeout 4
+no ip tftp claim-netascii
+ip tftp blocksize 512
+ip route static adjust-time 60
+ip route static inter-vrf
+no ip ospf name-lookup
+ip ssh time-out 120
+ip ssh authentication-retries 3
+ip ssh break-string ~break
+ip ssh version 2
+ip ssh dh min size 1024
+no ip ssh rekey time
+no ip ssh rekey volume
+ip ssh server authenticate user publickey
+ip ssh server authenticate user keyboard
+ip ssh server authenticate user password
+no ip ssh server peruser session limit
+ip ssh server certificate profile
+ server
+  no ocsp-response include
+ user
+  no ocsp-response required
+!
+ip ssh server algorithm mac hmac-sha1 hmac-sha1-96
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh server algorithm hostkey x509v3-ssh-rsa ssh-rsa
+ip ssh server algorithm authentication publickey keyboard password
+ip ssh server algorithm publickey x509v3-ssh-rsa ssh-rsa
+ip ssh client algorithm mac hmac-sha1 hmac-sha1-96
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+no ip access-list helper egress check
+!
+ ip prefix-list sequence-number
+ip sla low-memory 188134146
+ timeout 900
+ip sla server twamp
+ port 862
+ timer inactivity 900
+service-routing capabilities-manager
+logging history size 1
+logging history warnings
+logging trap informational
+logging delimiter tcp
+no logging origin-id
+logging facility local7
+no logging source-interface
+logging server-arp
+ethernet cfm mep crosscheck start-delay 30
+terminal-queue entry-retry-interval 60
+!
+ ipv6 prefix-list sequence-number
+ipv6 neighbor binding reachable-lifetime 300 stale-lifetime 86400 down-lifetime 86400
+no ipv6 neighbor binding logging
+no ipv6 neighbor binding max-entries
+!
+no ipv6 neighbor tracking
+no route-tag notation dotted-decimal
+!
+snmp-server inform retries 3 timeout 15 pending 25
+snmp mib event sample minimum 60
+snmp mib event sample instance maximum 0
+snmp mib expression delta minimum 1
+snmp mib expression delta wildcard maximum 0
+snmp mib flowmon alarmhistorysize 500
+snmp mib notification-log globalsize 500
+snmp mib notification-log globalageout 15
+tacacs-server cache expiry 24 enforce hours
+ipv6 access-list log-update threshold 2147483647
+!
+control-plane
+!
+cts role-based monitor enable
+alias exec h help
+alias exec lo logout
+alias exec p ping
+alias exec r resume
+alias exec s show
+alias exec u undebug
+alias exec un undebug
+alias exec w where
+no configuration mode exclusive
+default-value exec-character-bits 7
+default-value special-character-bits 7
+default-value data-character-bits 8
+!
+line con 0
+ motd-banner
+ exec-banner
+ exec-timeout 0 0
+ timeout login response 30
+ privilege level 1
+ flush-at-activation
+ activation-character 13
+ logout-warning 20
+ absolute-timeout 0
+ logging synchronous
+ login local
+ modem answer-timeout 15
+ modem dtr-delay 5
+ data-character-bits 8
+ exec-character-bits 7
+ special-character-bits 7
+ exec
+ length 24
+ width 80
+ history size 20
+ history
+  editing
+ monitor
+ escape-character soft DEFAULT
+ escape-character DEFAULT
+ autohangup session-timeout
+ databits 8
+ stopbits 2
+ start-character 17
+ stop-character 19
+line aux 0
+ motd-banner
+ exec-banner
+ exec-timeout 10 0
+ timeout login response 30
+ privilege level 1
+ flush-at-activation
+ activation-character 13
+ logout-warning 20
+ absolute-timeout 0
+ modem answer-timeout 15
+ modem dtr-delay 5
+ data-character-bits 8
+ exec-character-bits 7
+ special-character-bits 7
+ exec
+ length 24
+ width 80
+ history size 20
+ history
+  editing
+ monitor
+ escape-character soft DEFAULT
+ escape-character DEFAULT
+ autohangup session-timeout
+ callback forced-wait 4
+ callback nodsr-wait 5000
+ databits 8
+ stopbits 2
+ start-character 17
+ stop-character 19
+ speed 9600
+line vty 0 4
+ motd-banner
+ exec-banner
+ exec-timeout 10 0
+ timeout login response 30
+ privilege level 1
+ flush-at-activation
+ activation-character 13
+ logout-warning 20
+ absolute-timeout 0
+ logging synchronous
+ login local
+ modem answer-timeout 15
+ modem dtr-delay 5
+ data-character-bits 8
+ exec-character-bits 7
+ special-character-bits 7
+ exec
+ length 24
+ width 80
+ history size 20
+ history
+  editing
+ monitor
+ transport input ssh
+ escape-character soft DEFAULT
+ escape-character DEFAULT
+ autohangup session-timeout
+ start-character 17
+ stop-character 19
+line vty 5 1500
+ motd-banner
+ exec-banner
+ exec-timeout 10 0
+ timeout login response 30
+ privilege level 1
+ flush-at-activation
+ activation-character 13
+ logout-warning 20
+ absolute-timeout 0
+ logging synchronous
+ login local
+ modem answer-timeout 15
+ modem dtr-delay 5
+ data-character-bits 8
+ exec-character-bits 7
+ special-character-bits 7
+ exec
+ length 24
+ width 80
+ history size 20
+ history
+  editing
+ monitor
+ transport input ssh
+ escape-character soft DEFAULT
+ escape-character DEFAULT
+ autohangup session-timeout
+ start-character 17
+ stop-character 19
+!
+exception-slave core-file Switch01-core
+exception-slave protocol tftp
+exception protocol tftp
+exception region-size 131072
+exception data-corruption buffer truncate
+exception data-corruption buffer log
+exception crashinfo file flash0:crashinfo
+exception crashinfo buffersize 32
+exception crashinfo maximum files 1
+no exception crashinfo dump garbage-detector
+monitor event-trace stacktrace
+no monitor event-trace sequence-number
+monitor event-trace timestamps datetime msec
+monitor event-trace eigrp perf-events rate-limiting 1
+scheduler max-task-time 2000
+scheduler process-watchdog normal
+ntp allow mode control 3
+ntp leap-handle
+ntp mindistance 1
+ntp maxdistance 8
+no ntp update-calendar
+cns id hostname 
+cns id hostname event
+cns id hostname image
+cns image retry 60
+netconf max-sessions 4
+netconf lock-time 10
+netconf max-message 0
+restconf
+netconf-yang
+wsma id hostname
+xmpp id hostname
+event manager scheduler script thread class default number 1
+event manager scheduler applet thread class default number 5
+event manager scheduler shell thread class default number 1
+event manager scheduler shell thread class Z number 1
+!
+event manager history size events 10
+event manager history size traps 10
+event manager detector rpc max-sessions 4
+event manager detector routing bootup-delay 0
+end
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
